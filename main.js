@@ -91,8 +91,9 @@ const age=[44,43,45,76,98,23,7877,22,89,23,86,12,87,29,7,57,88,32,21,66,97,32,2,
 //     ageSum+=age[i]
 // }
 // console.log(ageSum)
-const ageSum=age.reduce((total,age)=>{
-    return total +age;
-},0);
 
-console.log(ageSum)
+// const ageSum=age.reduce((total,age)=>{
+//     return total +age;
+// },0);
+
+// console.log(ageSum)
