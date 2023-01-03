@@ -73,13 +73,16 @@ const age=[44,43,45,76,98,23,7877,22,89,23,86,12,87,29,7,57,88,32,21,66,97,32,2,
 // const companyName=companies.map(companie=>console.log(companie.name))
 
 //sort
-const sortCompanies=companies.sort((c1,c2)=>{
-    if(c1.start>c2.start){
-        return 1;
-    }else{
-        return -1;
-    }
-})
+// const sortCompanies=companies.sort((c1,c2)=>{
+//     if(c1.start>c2.start){
+//         return 1;
+//     }else{
+//         return -1;
+//     }
+// })
+// console.log(sortCompanies)
+
+const sortCompanies=companies.sort((a,b)=>(a.start>b.start ? 1 :-1))
 console.log(sortCompanies)
 
 //reduce
