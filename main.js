@@ -39,12 +39,15 @@ const age=[44,43,45,76,98,23,7877,22,89,23,86,12,87,29,7,57,88,32,21,66,97,32,2,
 // console.log(canDrink);
 
 //filter array method
-let canDrink=age.filter((age)=>{
-    if(age>=21) {
-        return age;
-    }
-})
-console.log(canDrink)
+// let canDrink=age.filter((age)=>{
+//     if(age>=21) {
+//         return true;
+//     }
+// })
+// console.log(canDrink)
+ 
+const canDrink=age.filter(age=> age>=21);
+
 
 //sort
 //map
