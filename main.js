@@ -66,9 +66,11 @@ const age=[44,43,45,76,98,23,7877,22,89,23,86,12,87,29,7,57,88,32,21,66,97,32,2,
 // console.log($2050Companies)
 
 //map
-const companyName=companies.map(companie=>{
-    return companie.name
-})
-console.log(companyName)
+// const companyName=companies.map(companie=>{
+//     return companie.name
+// })
+// console.log(companyName)
+
+const companyName=companies.map(companie=>console.log(companie.name))
 //sort
 //reduce
