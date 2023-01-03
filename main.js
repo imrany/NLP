@@ -9,6 +9,16 @@ const companies=[
         start:2015,
         end:2022
     },
+    {
+        name:'Lewis Consultants',
+        start:2050,
+        end:2072
+    },
+    {
+        name:'Imran Consultants',
+        start:2050,
+        end:2060
+    },
 ]
 
 const age=[44,43,45,76,98,23,7877,22,89,23,86,12,87,29,7,57,88,32,21,66,97,32,2,3,6,67,7,9]
@@ -46,8 +56,14 @@ const age=[44,43,45,76,98,23,7877,22,89,23,86,12,87,29,7,57,88,32,21,66,97,32,2,
 // })
 // console.log(canDrink)
  
-const canDrink=age.filter(age=> age>=21);
+// const canDrink=age.filter(age=> age>=21);
 
+const $2050Companies=companies.filter(year=>{
+    if(year.start===2050){
+        return true;
+    }
+})
+console.log($2050Companies)
 
 //sort
 //map
