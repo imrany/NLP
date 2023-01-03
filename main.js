@@ -82,7 +82,12 @@ const age=[44,43,45,76,98,23,7877,22,89,23,86,12,87,29,7,57,88,32,21,66,97,32,2,
 // })
 // console.log(sortCompanies)
 
-const sortCompanies=companies.sort((a,b)=>(a.start>b.start ? 1 :-1))
-console.log(sortCompanies)
+// const sortCompanies=companies.sort((a,b)=>(a.start>b.start ? 1 :-1))
+// console.log(sortCompanies)
 
 //reduce
+let ageSum=0;
+for(let i=0;i<age.length;i++) {
+    ageSum+=age[i]
+}
+console.log(ageSum)
