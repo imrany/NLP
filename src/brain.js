@@ -1,6 +1,5 @@
-// Import Brain.js and Natural
-import * as brain from 'brain.js';
-import * as natural from 'natural';
+// Import natural library
+const natural = require('natural');
 
 // Create and configure the NaiveBayes classifier
 const classifier = new natural.BayesClassifier();
@@ -11,6 +10,7 @@ const trainingData = [
   { text: "I like your shirt", label: "non-insult" },
   { text: "I love you", label: "non-insult" },
   { text: "I hate you", label: "insult" },
+
   // Add more labeled examples to your training data
 ];
 
@@ -19,7 +19,7 @@ trainingData.forEach(data => classifier.addDocument(data.text, data.label));
 classifier.train();
 
 // Test the NaiveBayes classifier with some input data
-const input = "I like shirt";
+const input = "I love your shirt";
 const output = classifier.classify(input);
 
 // Output the prediction
