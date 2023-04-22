@@ -1,26 +1,24 @@
-// Import Brain.js and Natural
+// Import brain.js library
 import * as brain from 'brain.js';
-import * as natural from 'natural';
 
-// Create and configure the NaiveBayes classifier
-const classifier = new natural.BayesClassifier();
+// Create the LSTM neural network
+const net = new brain.recurrent.LSTM();
 
 // Define the training data
 const trainingData = [
-  { text: "You are stupid", label: "insult" },
-  { text: "I like your shirt", label: "non-insult" },
-  { text: "I love you", label: "non-insult" },
-  { text: "I hate you", label: "insult" },
+  { input: "You are stupid", output: "insult" },
+  { input: "I like your shirt", output: "non-insult" },
+  { input: "I love you", output: "non-insult" },
+  { input: "I hate you", output: "insult" },
   // Add more labeled examples to your training data
 ];
 
-// Train the NaiveBayes classifier
-trainingData.forEach(data => classifier.addDocument(data.text, data.label));
-classifier.train();
+// Train the LSTM neural network
+net.train(trainingData, { iterations: 1000, errorThresh: 0.01 });
 
-// Test the NaiveBayes classifier with some input data
-const input = "I like shirt";
-const output = classifier.classify(input);
+// Test the LSTM neural network with some input data
+const input = "I hate you";
+const output = net.run(input);
 
 // Output the prediction
 if (output === "insult") {
