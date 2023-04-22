@@ -38,7 +38,7 @@ You can then use the classifier.classify() method to make predictions on new inp
 
 Note that the Naive Bayes classifier is a simple probabilistic model that assumes independence between features, and may not always capture complex patterns in the input text data. It's important to experiment with different classifiers and fine-tune the model to achieve the best possible results for your specific use case. Additionally, as with any machine learning model, proper text preprocessing techniques may be necessary to achieve better classification accuracy, depending on the specific characteristics of your dataset.
 
-#Using Brain.js
+# Using Brain.js
 ```js
 // Import brain.js library
 const brain = require('brain.js');
